@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body style="background-color: azure;">
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main class="container">
+            <div>
+                <br>
+                <div class="card card-body">
+                    <h1 style="text-align: center;">Agregar Productos</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="text" placeholder="Nombre de Producto" class="form form-control" id="nameProductA" required>
+                            <br>
+                            <input type="text" placeholder="Precio de Producto" class="form form-control" id="priceProductA" required>
+                            <br>
+                            <input type="text" placeholder="Cantidad de Producto" class="form form-control" id="quantityProductA" required>
+                            <br>
+                            <button class="btn btn-success" id="addProduct">Agregar Producto</button>
+                        </div>
+                        <div class="col-8">
+                            <div
+                                class="table-responsive"
+                            >
+                                <table
+                                    class="table table-striped"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Precio Compra</th>
+                                            <th scope="col">Precio Venta</th>
+                                            <th scope="col">Cantidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tablaProduct">
+                        
+                                    
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card card-body">
+                    <h1 style="text-align: center;">Compra de Productos</h1>
+                    <hr>
+                    <div class="row">
+                    <div class="col-4">
+                        <input type="text" placeholder="Nombre de Producto" class="form form-control" id="nameProduct">
+                        <br>
+                        <input type="text" placeholder="Precio de Producto" class="form form-control" id="priceProduct">
+                        <br>
+                        <input type="text" placeholder="Cantidad de Producto" class="form form-control" id="quantityProduct">
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-primary" id="searchProduct">Buscar Producto</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-success" id="addSale">Agregar Venta</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-8">
+                        <div
+                            class="table-responsive"
+                        >
+                            <table
+                                class="table table-striped"
+                            >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla" style="align-items: center;">
+                    
+                                
+                                </tbody>
+                            </table>
+                        </div> 
+                        <div class="table-responsive">
+                            <table class="table table-danger">
+                                <tbody id="tabla-total">
+                                    <tr>
+                                        <td>Cantidad Total</td><td id="canttotal"></td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Cobrar Venta
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cobro de Venta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <label for=""><span>Monto a cobrar:</span></label>
+                    <label for="" id="cobro"></label>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+  
+            </div>
+            <script src="./venta.js"></script>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
